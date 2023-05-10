@@ -11,7 +11,7 @@
         <div class="container">
             <!--el encabezado-->            
             <header class="pt-4 pb-5 d-flex justify-content-between align-items-center">
-                <h1 class="fs-4 mt-2"><a href="index.html">María Jesús Montero</a></h1>
+                <h1 class="fs-4 mt-2"><a href="index.html" class="text-decoration-none">María Jesús Montero</a></h1>
                 <button onclick="location.href='index.html'" class="btn btn-outline-secondary btn-sm"><span>&nbsp; &larr; Volver &nbsp;</span></button>
             </header>
             <!--lo central-->
@@ -142,35 +142,35 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td><a href="#" target="_blank">HTML5 + CSS3 + p5.js</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/clase01" target="_blank">Clase 01</a></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td><a href="#" target="_blank">HTML5 + CSS3 + p5.js</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/clase02" target="_blank">Clase 02</a></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td><a href="#" target="_blank">HTML5 + CSS3 + p5.js</a></td>
+                                        <td><a href=" https://mjmonteroa.github.io/clase-03/" target="_blank">Clase 03</a></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td><a href="#" target="_blank">Evaluación Nº1</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/Evaluacion-1" target="_blank">Evaluación Nº1</a></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td><a href="#" target="_blank">HTML5 + CSS3 + otras bibliotecas de JS</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/Clase-05/" target="_blank">Clase 05</a></td>
                                     </tr>
                                     <tr>
                                         <td>6</td>
-                                        <td><a href="#" target="_blank">HTML5 + CSS3 + otras bibliotecas de JS</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/Clase-06/" target="_blank">Clase 06</a></td>
                                     </tr>
                                     <tr>
                                         <td>7</td>
-                                        <td><a href="#" target="_blank">HTML5 + CSS3 + otras bibliotecas de JS</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/Clase-07" target="_blank">Clase 07</a></td>
                                     </tr>
                                     <tr>
                                         <td>8</td>
-                                        <td><a href="#" target="_blank">Evaluación Nº2</a></td>
+                                        <td><a href="https://mjmonteroa.github.io/Ev2/" target="_blank">Evaluación Nº2</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -188,22 +188,7 @@
                 //Me aseguro de que n sea siempre número
                 n = Number(n);
                 //Si n es siempre número, ya no puede ser null
-                $.getJSON("https://raw.githubusercontent.com/profesorfaco/dno037-2023/main/clase-07/datos.json", function (data) {
-                    console.log(data);
-                    //el detalle de un trabajo
-                    $("section").append('<div class="col"><h2 class="fs-1">' + data[n].nombre + "</a></h2><p>" + data[n].texto + "</p><small>#" + data[n].soporte + "</small></div>");
-                    //un forEach para cada foto del trabajo
-                    data[n].fotos.forEach((x) => {
-                            $("section").append('<div class="col"><img src="' + x + '" class="w-100 rounded shadow-sm"></div>');
-                        });
-                    }); // cierro $.getJSON((){});
-                $("button").css("cursor","pointer");
-            }); //cierro $(function(){});
-        </script>
-        <!--También vamos a buscar los 81KB de la biblioteca de JavaScript de Bootstrap combinada con Popper.js-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>        
-    </body>
-</html>", function (data) {
+                $.getJSON("https://raw.githubusercontent.com/mjmonteroa/Clase-07/main/datos.json", function (data) {
                     console.log(data);
                     //el detalle de un trabajo
                     $("section").append('<div class="col"><h2 class="fs-1">' + data[n].nombre + "</a></h2><p>" + data[n].texto + "</p><small>#" + data[n].soporte + "</small></div>");
